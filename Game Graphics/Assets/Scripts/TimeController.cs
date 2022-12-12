@@ -27,6 +27,24 @@ public class TimeController : MonoBehaviour
     [SerializeField]
     private float sunsetHour;
 
+    [SerializeField]
+    private Color dayAmbientLight;
+
+    [SerializeField]
+    private Color nightAmbientLight;
+
+    [SerializeField]
+    private AnimationCurve lightChangeCurve;
+
+    [SerializeField]
+    private float maxSunLightIntensity;
+
+    [SerializeField]
+    private Light moonLight;
+
+    [SerializeField]
+    private float maxMoonLightIntensity;
+
     private TimeSpan sunriseTime;
 
     private TimeSpan sunsetTime;
@@ -44,6 +62,7 @@ public class TimeController : MonoBehaviour
     {
         UpdateTimeOfDay();
         RotateSun();
+        UpdateLightSettings();
     }
 
     private void UpdateTimeOfDay()
@@ -80,7 +99,13 @@ public class TimeController : MonoBehaviour
         sunLight.transform.rotation = Quaternion.AngleAxis(sunLightRotation, Vector3.right);
     }
 
-
+    private void UpdateLightSettings()
+    {
+        float dotProduct = Vector3.Dot(sunLight.transform.forward, Vector3.down);
+        sunLight.intensity = Mathf.Lerp(0,maxSunLightIntensity, lightChangeCurve.Evaluate(dotProduct));
+        moonLight.intensity = Mathf.Lerp(maxMoonLightIntensity, 0, lightChangeCurve.Evaluate(dotProduct));
+        RenderSettings.ambientLight = Color.Lerp(nightAmbientLight, dayAmbientLight, lightChangeCurve.Evaluate(dotProduct));
+    }
 
     private TimeSpan CalculateTimeDifference(TimeSpan fromTime, TimeSpan toTime)
     {
