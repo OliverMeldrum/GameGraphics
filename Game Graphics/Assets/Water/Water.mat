@@ -56,15 +56,15 @@ Material:
     m_Ints: []
     m_Floats:
     - _Depth: 0.54
-    - _Displacement: 0.58
-    - _NormalStrength: 1
+    - _Displacement: 1
+    - _NormalStrength: 0.773
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RippleDensity: 50
+    - _RippleDensity: 100
     - _RippleSpeed: 2
     - _RippleStrength: 10
     - _Smoothness: 1
-    - _Strength: 0.36
+    - _Strength: 0.51
     m_Colors:
     - _DeepWaterColor: {r: 0.32549015, g: 0.53688216, b: 0.8784314, a: 0.8156863}
     - _RippleColor: {r: 0.08116765, g: 0.3247544, b: 0.9056604, a: 0}
