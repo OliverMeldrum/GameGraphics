@@ -70,7 +70,7 @@ public class TimeController : MonoBehaviour
         currentTime = currentTime.AddSeconds(Time.deltaTime * timeMultiplier);
         if (timeText !=null)
         {
-            timeText.text = currentTime.ToString("HH:mm");
+            timeText.text = "Time of Day: " + currentTime.ToString("HH:mm");
         }
     }
 
