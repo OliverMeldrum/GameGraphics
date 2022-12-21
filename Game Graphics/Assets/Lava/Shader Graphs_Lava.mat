@@ -55,12 +55,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Displacement: 0.5
     - _LavaDensity: 16.42
     - _LavaPower: 3.4
     - _LavaSpeed: 4.96
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
+    - _Emission: {r: 0.2099563, g: 0.06657151, b: 0, a: 0}
     - _Lake_Colour: {r: 0.95283014, g: 0.9424506, b: 0.19326267, a: 0}
     - _LavaColor: {r: 0.9150943, g: 0.4454937, b: 0.10791197, a: 0.8705882}
   m_BuildTextureStacks: []
