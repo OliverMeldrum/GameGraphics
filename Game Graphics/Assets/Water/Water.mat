@@ -60,7 +60,7 @@ Material:
     - _NormalStrength: 0.773
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RippleDensity: 100
+    - _RippleDensity: 1000
     - _RippleSpeed: 2
     - _RippleStrength: 10
     - _Smoothness: 1
