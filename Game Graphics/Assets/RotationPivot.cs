@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanetRotate : MonoBehaviour
+public class RotationPivot : MonoBehaviour
 {
     public float rotationSpeed;
+    public GameObject pivotObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,6 @@ public class PlanetRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0, rotationSpeed, 0)* Time.deltaTime);
+        transform.RotateAround(pivotObject.transform.position, new Vector3(0, 1, 0), rotationSpeed * Time.deltaTime);
     }
 }
