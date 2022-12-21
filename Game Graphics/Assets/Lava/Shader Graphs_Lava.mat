@@ -62,7 +62,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Emission: {r: 0.2099563, g: 0.06657151, b: 0, a: 0}
+    - _Emission: {r: 0.8867924, g: 0.29923823, b: 0.0292809, a: 1}
     - _Lake_Colour: {r: 0.95283014, g: 0.9424506, b: 0.19326267, a: 0}
     - _LavaColor: {r: 0.9150943, g: 0.4454937, b: 0.10791197, a: 0.8705882}
   m_BuildTextureStacks: []
